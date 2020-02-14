@@ -138,6 +138,7 @@ class AwsS3Provider extends Provider implements ProviderInterface
             'cloudfront' => $this->default['providers']['aws']['s3']['cloudfront']['use'],
             'cloudfront_url' => $this->default['providers']['aws']['s3']['cloudfront']['cdn_url'],
             'http' => $this->default['providers']['aws']['s3']['http'],
+            'endpoint' => $this->default['providers']['aws']['s3']['endpoint']
         ];
 
         // check if any required configuration is missed
@@ -161,6 +162,7 @@ class AwsS3Provider extends Provider implements ProviderInterface
             $this->setS3Client(new S3Client([
                         'version' => $this->supplier['version'],
                         'region' => $this->supplier['region'],
+                        'endpoint' => $this->supplier['endpoint'],
                         'http'    => $this->supplier['http']
                     ]
                 )
