@@ -382,7 +382,7 @@ class AwsS3Provider extends Provider implements ProviderInterface
     {
         $filesOnAWS = new Collection([]);
 
-        $files = $this->s3_client->getPaginator('ListObjects', [
+        $files = $this->s3_client->getIterator('ListObjects', [
             'Bucket' => $this->getBucket()
         ]);
 
