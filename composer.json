@@ -1,5 +1,5 @@
 {
-    "name": "vinelab/cdn",
+    "name": "tichon/laravel-cdn",
     "description": "Content Delivery Network (CDN) Package for Laravel (5.8 - 6.0)",
     "license": "MIT",
     "keywords": [
