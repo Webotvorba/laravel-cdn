@@ -99,7 +99,7 @@ class CdnFacade implements CdnFacadeInterface
             $manifest = json_decode(file_get_contents(public_path('manifest.json')), true);
         }
         if (isset($manifest[$path])) {
-            return $this->generateUrl('build/' . $manifest[$path], 'public/');
+            return $this->generateUrl($manifest[$path], 'public/');
         }
         throw new \InvalidArgumentException("File {$path} not defined in asset manifest.");
     }
